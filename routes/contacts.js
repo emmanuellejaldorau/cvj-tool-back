@@ -5,7 +5,7 @@ const Contact = require("../models/contact-model.js");
 
 //-----------------------ADD CONTACT -----------------------
 router.post(
-  "/add-contact",
+  "/contacts",
   (req, res, next) => {
     const { fullName, email, phone } = req.body;
 
@@ -20,7 +20,7 @@ router.post(
 
 
 //---------------------DELETE CONTACT -----------------------
-router.get("/contacts/:contactId/delete", (req, res, next) => {
+router.delete("/contacts/:contactId", (req, res, next) => {
 
   const { contactId } = req.params;
 
