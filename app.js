@@ -1,4 +1,4 @@
-const { mongodb_url } = require('./config');
+const { mongodb_uri } = require('./config');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -30,7 +30,7 @@ app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(docs));
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect("mongodb://localhost/cvjDB", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongodb_uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
