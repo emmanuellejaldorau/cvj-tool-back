@@ -1,7 +1,10 @@
 module.exports = {
     tags: [
       {
-        name: "Contact", // name of a tag
+        name: "User", 
       },
+      {
+        name: "Contact", 
+      }
     ],
   };

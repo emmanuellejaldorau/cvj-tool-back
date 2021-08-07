@@ -2,20 +2,14 @@ const basicInfo = require('./basic-info');
 const servers = require('./servers');
 const components = require('./components');
 const tags = require('./tags');
-const contact = require('./contact');
+const paths = require('./paths');
+
 
 module.exports = {
     ...basicInfo,
     ...servers,
     ...components,
     ...tags,
-    ...contact
+    ...paths
 };
 
-//module.exports = {
-//    ...basicInfo,
-//    ...servers,
-//    ...components,
-//    ...tags,
-//    ...todos
-//};

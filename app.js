@@ -38,7 +38,8 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-app.use('/crm', contactsRouter);
+  app.use('/crm', usersRouter);
+  app.use('/crm', contactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
