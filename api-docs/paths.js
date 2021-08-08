@@ -6,7 +6,7 @@ const deleteUser = require('./user/delete-user');
 const getContacts = require('./contact/get-contacts');
 const getContact = require('./contact/get-contact');
 const createContact = require('./contact/create-contact');
-//const updateContact = require('./contact/update-contact');
+const updateContact = require('./contact/update-contact');
 const deleteContact = require('./contact/delete-contact');
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
         },
         '/contacts/{id}':{
             ...getContact,
- //           ...updateContact,
+            ...updateContact,
             ...deleteContact
         }
     }
