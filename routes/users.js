@@ -18,8 +18,26 @@ router.post(
   }
 );
 
+//-----------------------UPDATE USER -----------------------
+router.put('/users/:id', (req, res, next) => {
 
-//---------------------DELETE CONTACT -----------------------
+  const { fullName, email } = req.body;
+
+  const updatedUser = new User({
+    _id: req.params.id,
+    fullName,
+    email
+  });
+
+  User.updateOne({_id: req.params.id}, updatedUser)
+    .then(userDoc => {
+      res.json(userDoc);
+    })
+    .catch(err => next(err));
+});
+
+
+//---------------------DELETE USER -----------------------
 router.delete("/users/:userId", (req, res, next) => {
 
   const { userId } = req.params;
@@ -32,7 +50,7 @@ router.delete("/users/:userId", (req, res, next) => {
 });
 
 
-//----------------------CONTACT LIST ------------------------
+//----------------------USER LIST ------------------------
 router.get("/users", (req, res, next) => {
   
     User.find()
@@ -43,7 +61,7 @@ router.get("/users", (req, res, next) => {
   });
   
   
-  //---------------------CONTACT DETAILED PAGE -----------------------------  
+  //---------------------USER DETAILED PAGE -----------------------------  
   router.get("/users/:userId", (req, res, next) => {
 
     const { userId } = req.params;
