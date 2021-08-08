@@ -1,7 +1,7 @@
 const getUsers = require('./user/get-users');
 const getUser = require('./user/get-user');
 const createUser = require('./user/create-user');
-//const updateUser = require('./user/update-user');
+const updateUser = require('./user/update-user');
 const deleteUser = require('./user/delete-user');      
 const getContacts = require('./contact/get-contacts');
 const getContact = require('./contact/get-contact');
@@ -17,7 +17,7 @@ module.exports = {
         },
         '/users/{id}':{
             ...getUser,
- //           ...updateUser,
+            ...updateUser,
             ...deleteUser
         },
         '/contacts':{
