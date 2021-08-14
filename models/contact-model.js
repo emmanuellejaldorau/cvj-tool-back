@@ -13,6 +13,11 @@ const contactSchema = new Schema({
     },
     phone: { type: Number, required: true },
     status: { type: String },
+    assignee: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+      },
 }, {
     // additional settings for Schema constructor function (class)
     timestamps: true,

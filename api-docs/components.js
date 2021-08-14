@@ -16,7 +16,7 @@ module.exports = {
             type: "string", 
             description: "Contact's email", 
           }
-        },
+        }
       },
       User: {
         type: "object", 
@@ -33,7 +33,7 @@ module.exports = {
             type: "string", 
             description: "Contact's email", 
           }
-        },
+        }
       },
       ContactInput: {
         type: "object", 
@@ -54,7 +54,11 @@ module.exports = {
             type: "string", 
             description: "Contact's phone number", 
           },
-        },
+          assignee: {
+            type: "string", 
+            description: "Assignee of the contact", 
+          }
+        }
       },
       Contact: {
         type: "object", 
@@ -79,7 +83,11 @@ module.exports = {
             type: "string", 
             description: "Contact's phone number", 
           },
-        },
+          assignee: {
+            type: "string", 
+            description: "Assignee of the contact", 
+          }
+        }
       },
       Error: {
         type: "object", 
@@ -91,9 +99,9 @@ module.exports = {
           internal_code: {
             type: "string", 
             description: "Error internal code", 
-          },
-        },
-      },
+          }
+        }
+      }
     },
   },
 };
