@@ -1,4 +1,4 @@
-const { mongodb_uri } = require('./config');
+const { mongodb_uri } = require('./config/env');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
